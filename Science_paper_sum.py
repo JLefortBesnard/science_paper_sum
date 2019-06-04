@@ -24,20 +24,22 @@ class sum_paper_sheet:
             self.my_dataframe = pd.read_excel(path_df)
 
     def add_new_article(self):
-        title = input("Title >")
-        authors = input("Authors >")
-        journal = input("Journal >")
-        date = input("Date >")
-        sample_size = input("Sample size >")
-        methods = input("Methods >")
-        results = input("Results >")
-        discussion = input("Discussion >")
-        other = input("Other >")
-        new_entry = [title , authors, journal, date, sample_size, methods, results, discussion, other]
+        names = ["title" , "authors", "journal", "date", "sample_size", "methods", "results", "discussion", "other"]
+        new_entry = []
+        for name in names:
+            txt = []
+            print("type donedone when you're done with a specific part")
+            inTxt = input("{} >".format(name))
+            while "donedone" not in inTxt:
+                txt.append(inTxt)
+                inTxt = input("add more in {}>".format(name))
+            txt = ''.join(txt)
+            new_entry.append(txt)
         row_number = len(self.my_dataframe)
         self.my_dataframe.loc[row_number] = new_entry
         return self.my_dataframe
-
+ 
+    
     def modify_entry(self):
         print(self.my_dataframe)
         row_number = int(input("Which index to modify?"))
@@ -78,8 +80,10 @@ def reading_of_the_day():
             clear_screen()
             dic.modify_entry()
         elif choice == "2":
+            clear_screen()
             dic.print_df()
         else:
+            clear_screen()
             dic.save()
 
 reading_of_the_day()
