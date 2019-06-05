@@ -1,8 +1,10 @@
 # Keep the summary of research papers
-Create an Excel sheet with selected chunks of scientific papers.
+<p align="justify"> 
+This script will create an Excel sheet and ask you to paste selected chunks of scientific papers. You end up with an Excel document including specific information about each article you've read.
+</p>
 
 ## Before running the program
-You need to make sure Python 3 is installed (<a href="http://jeremylefortbesnard.de/LearnPythonandML/">info here</a>) as well as the module pandas. If not, activate python (open your terminal and type python or ipython) and type in:
+You need to make sure Python 3 is installed (<a href="http://jeremylefortbesnard.de/LearnPythonandML/">info here</a>) as well as the module pandas. If not installed, activate python (open your terminal and type python or ipython) and type in:
 ```
 !pip install pandas
 ```
@@ -15,9 +17,9 @@ mkdir science_papers_sum    # create a new folder named "science_papers_sum"
 cd science_papers_sum       # move into this directory
 ```
 <p align="justify"> 
-Now you can download the script Science_paper_sum.py (on the top)
-Put the script into your newly created folder "science_papers_sum".
-Go back into your terminal with python or ipython activated and type:
+Now you can download the script sum_research_papers_keeper.py (see link above).
+Put the script file into your newly created folder "science_papers_sum".
+Go back into your terminal with python (or ipython) activated and type:
 </p>
 
 ```
@@ -56,8 +58,9 @@ Then type 4 and press Enter to save the Dataframe into the Excel document.
 </p>
 
 ### Modify entry
-
+<p align="justify"> 
 The program will ask you which index and column to modify. Copy & paste the new value, press Enter. Then type 4 and press Enter to save it.
+</p>
 
 ### Show the complete data
 
@@ -65,10 +68,13 @@ This option will print the Dataframe.
 
 ### Read a specific entry
 <p align="justify"> 
-This option will allow you to read what is in each column of a specific index. You just have to specifiy the index.
+This option will allow you to read what is in each column of a specific index. You just have to specify the index.
 If you write *all* or anything else but a number, the program will display all columns of all entries one by one.
 </p>
 
 ### Save data
 
 This option will save the Dataframe into the Excel document.
+
+
+Feel free to improve the code (pull request), to fork the repository or to email me if you have any question
