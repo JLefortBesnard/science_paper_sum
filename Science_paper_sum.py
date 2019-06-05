@@ -14,17 +14,17 @@ def clear_screen():
 class sum_paper_sheet:
     def __init__(self, path_df):
         self.path = path_df
-        if os.path.exists(path_df):
-            self.my_dataframe = pd.read_excel(path_df)
+        self.columns = ["Title", "Authors", "Journal", "Date", "Methods",
+                       "Results", "Discussion", "Other"]
+        if os.path.exists(self.path):
+            self.my_dataframe = pd.read_excel(self.path)
         else:
-            df = pd.DataFrame(columns=["Title", "Authors",
-                                    "Journal", "Date", "Sample size", "Methods",
-                                    "Results", "Discussion", "Other"])
-            df.to_excel(path_df, index=False)
-            self.my_dataframe = pd.read_excel(path_df)
+            df = pd.DataFrame(columns=self.columns)
+            df.to_excel(self.path, index=False)
+            self.my_dataframe = pd.read_excel(self.path)
 
     def add_new_article(self):
-        names = ["title" , "authors", "journal", "date", "sample_size", "methods", "results", "discussion", "other"]
+        names = self.columns
         new_entry = []
         for name in names:
             txt = []
@@ -54,6 +54,14 @@ class sum_paper_sheet:
 
     def print_df(self):
         print(self.my_dataframe)
+        
+    def read_df(self):
+        print(self.my_dataframe)
+        row_number = int(input("Which index to display?"))
+        for column in self.columns:
+            print("{} > ".format(column))
+            entry = self.my_dataframe[column].loc[row_number]
+            print(entry)
 
     def save(self):
         self.my_dataframe.to_excel(self.path, index=False)
@@ -73,11 +81,10 @@ def reading_of_the_day():
             chosen_topic = input("Select topic or create new one (with .xls)>")
     clear_screen()
     print("Dataframe chosen: {}".format(dic.print_df()))
-    time.sleep(2)
     a = 0
     while a == 0:
-        clear_screen()
-        print("Add new entry (0), modify entry (1), show the data (2) or save data (3)? (press ctrl + c to exit)")
+        print("Add new entry (0), modify entry (1), show the complete data (2),")
+        print("read a specific entry (3) or save data (4)? (press ctrl + c to exit)")
         choice = input(">")
         if choice == "0":
             clear_screen()
@@ -88,6 +95,9 @@ def reading_of_the_day():
         elif choice == "2":
             clear_screen()
             dic.print_df()
+        elif choice == "3":
+            clear_screen()
+            dic.read_df() 
         else:
             clear_screen()
             dic.save()
