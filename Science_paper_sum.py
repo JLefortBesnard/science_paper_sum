@@ -28,11 +28,15 @@ class sum_paper_sheet:
         new_entry = []
         for name in names:
             txt = []
-            print("type donedone when you're done with a specific part")
+            clear_screen()
+            print("type 0 and press enter to move on to the next entry")
+            print(" " * 10)
+            print(" *** ")
             inTxt = input("{} >".format(name))
-            while "donedone" not in inTxt:
+            while inTxt != "0":
                 txt.append(inTxt)
-                inTxt = input("add more in {}>".format(name))
+                inTxt = input("add more in {} >".format(name))
+            print(" {} completed".format(name))
             txt = ''.join(txt)
             new_entry.append(txt)
         row_number = len(self.my_dataframe)
@@ -69,8 +73,10 @@ def reading_of_the_day():
             chosen_topic = input("Select topic or create new one (with .xls)>")
     clear_screen()
     print("Dataframe chosen: {}".format(dic.print_df()))
+    time.sleep(2)
     a = 0
     while a == 0:
+        clear_screen()
         print("Add new entry (0), modify entry (1), show the data (2) or save data (3)? (press ctrl + c to exit)")
         choice = input(">")
         if choice == "0":
