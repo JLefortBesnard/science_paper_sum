@@ -2,7 +2,7 @@
 Create an Excel sheet with selected chunks of scientific papers.
 
 ## Before running the program
-You need to make sure Python 3 is installed as well as the module pandas. If not, activate python (open your terminal and type python or ipython) and type in:
+You need to make sure Python 3 is installed (<a href="http://jeremylefortbesnard.de/LearnPythonandML/">info here</a>) as well as the module pandas. If not, activate python (open your terminal and type python or ipython) and type in:
 ```
 !pip install pandas
 ```
@@ -14,12 +14,14 @@ You can do it by typing in your terminal:
 mkdir science_papers_sum    # create a new folder named "science_papers_sum"
 cd science_papers_sum       # move into this directory
 ```
-
+<p align="justify"> 
 Now you can download the script Science_paper_sum.py (on the top)
 Put the script into your newly created folder "science_papers_sum".
 Go back into your terminal with python or ipython activated and type:
+</p>
+
 ```
-run Science_paper_sum.py
+run sum_research_papers_keeper.py
 ```
 
 ## 1. Select the name of the topic you wanna read article about
@@ -44,11 +46,14 @@ For example, to add a column named "sample size", type:
 self.columns = ["Title", "Authors", "Journal", "Date", "Sample size", "Methods",
                 "Results", "Discussion", "Other"]
 ```
+<p align="justify"> 
 The program first ask you about the title, copy paste the title and press Enter.
 It then asks you if you want to add more in title. Type 0 and press Enter if not. Keep pasting stuff otherwise.
-
+</p>
+<p align="justify"> 
 Follow the same procedure for the following columns until it gets back to asking you about what to do next.
 Then type 4 and press Enter to save the Dataframe into the Excel document.
+</p>
 
 ### Modify entry
 
@@ -59,12 +64,11 @@ The program will ask you which index and column to modify. Copy & paste the new 
 This option will print the Dataframe.
 
 ### Read a specific entry
-
+<p align="justify"> 
 This option will allow you to read what is in each column of a specific index. You just have to specifiy the index.
 If you write *all* or anything else but a number, the program will display all columns of all entries one by one.
+</p>
 
 ### Save data
 
 This option will save the Dataframe into the Excel document.
-
-Feel free to improve this script (pull request), to fork the repository or to email me if you have any question
