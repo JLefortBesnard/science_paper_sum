@@ -67,4 +67,4 @@ If you write *all* or anything else but a number, the program will display all c
 
 This option will save the Dataframe into the Excel document.
 
-Feel free to improve this script (pull request) or to email me if you have any question
+Feel free to improve this script (pull request), to fork the repository or to email me if you have any question
