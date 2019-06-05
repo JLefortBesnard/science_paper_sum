@@ -57,11 +57,15 @@ class sum_paper_sheet:
         
     def read_df(self):
         print(self.my_dataframe)
+        print(" " * 150)
+        print(" ***** ")
         row_number = int(input("Which index to display?"))
         for column in self.columns:
             print("{} > ".format(column))
             entry = self.my_dataframe[column].loc[row_number]
             print(entry)
+            print(" " * 150)
+            next = input("Next: press Enter")
 
     def save(self):
         self.my_dataframe.to_excel(self.path, index=False)
@@ -81,10 +85,13 @@ def reading_of_the_day():
             chosen_topic = input("Select topic or create new one (with .xls)>")
     a = 0
     while a == 0:
-        clear_screen()
+        print(" " * 150)
+        print(" ***** ")
         print("Add new entry (0), modify entry (1), show the complete data (2),")
         print("read a specific entry (3) or save data (4)? (press ctrl + c to exit)")
         choice = input(">")
+        print(" ***** ")
+        print(" " * 150)
         if choice == "0":
             clear_screen()
             dic.add_new_article()
