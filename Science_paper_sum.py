@@ -29,7 +29,7 @@ class sum_paper_sheet:
         for name in names:
             txt = []
             clear_screen()
-            print("type 0 and press enter to move on to the next entry")
+            print("type 0 and press enter to stop adding information")
             print(" " * 10)
             print(" *** ")
             inTxt = input("{} >".format(name))
@@ -49,7 +49,10 @@ class sum_paper_sheet:
         row_number = int(input("Which index to modify?"))
         column = input("Which column to modify?")
         new_entry = input("new {} >".format(column))
-        self.my_dataframe[column].loc[row_number] = new_entry
+        try:
+            self.my_dataframe[column].loc[row_number] = new_entry
+        except:
+            print("Failed to modify entry (maybe the index or column is wrong?)")
         return self.my_dataframe
 
     def print_df(self):
