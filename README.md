@@ -1,28 +1,28 @@
-# Keep the summary of research papers (script: sum_research_papers_keeper.py)
+# Keep the summary of research papers
 Create an Excel sheet with selected chunks of scientific papers.
 
 ## Before running the program
 You need to make sure Python 3 is installed as well as the module pandas. If not, activate python (open your terminal and type python or ipython) and type in:
 
-'''
+```
 !pip install pandas
-'''
+```
 
 Then you need to make sure you are in the working directory you wanna be in. The program will create an Excel document, if your Desktop is already busy, maybe you should create a new folder and run the script within the new folder.
 
 You can do it this way:
-'''
+```
 mkdir science_papers_sum    # create a new folder named "science_papers_sum"
 cd science_papers_sum       # move into this directory
-'''
+```
 
 Now you can download the script Science_paper_sum.py (on the top)
 Put the script into your newly created folder "science_papers_sum".
 Go back into your terminal with python or ipython activated and type 
 
-'''
+```
 run Science_paper_sum.py
-'''
+```
 
 ## 1. Select the name of the topic you wanna read article about
 
@@ -36,10 +36,10 @@ Add new entry (0), modify entry (1), show the complete data (2), read a specific
 
 The program will ask you to paste information about each part defined in the program. You can change this by changing the part of the code at line 17:
 
-'''
+```
 self.columns = ["Title", "Authors", "Journal", "Date", "Methods",
                 "Results", "Discussion", "Other"]
-'''
+```
 
 Type 0 and press Enter
 The program first ask you about the title, copy paste the title and press Enter
