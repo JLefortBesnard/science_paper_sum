@@ -79,10 +79,9 @@ def reading_of_the_day():
         except:
             print("I don't understand (maybe you forgot the .xls at the end of the file name)")
             chosen_topic = input("Select topic or create new one (with .xls)>")
-    clear_screen()
-    print("Dataframe chosen: {}".format(dic.print_df()))
     a = 0
     while a == 0:
+        clear_screen()
         print("Add new entry (0), modify entry (1), show the complete data (2),")
         print("read a specific entry (3) or save data (4)? (press ctrl + c to exit)")
         choice = input(">")
