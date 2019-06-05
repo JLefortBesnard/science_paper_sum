@@ -24,7 +24,7 @@ run Science_paper_sum.py
 
 ## 1. Select the name of the topic you wanna read article about
 
-For example, let's say I'm on a new project about the Default Mode Network in Alzheimer, I'd type "DMN_Alzheimer", this would create a Excel file with a column for title, date, authors, journal, methods, results, discussion and other. If the file already exists, then it will open it.
+For example, let's say I'm on a new project about the Default Mode Network in Alzheimer, I'd type "DMN_Alzheimer.xls" and press Enter. This action would create a empty dataframe with a column for title, date, authors, journal, methods, results, discussion and other,  and save it as an Excel file. If the file already exists, then it will open it.
 
 ## 2. Select what you wanna do with it
 
@@ -32,22 +32,27 @@ Add new entry (0), modify entry (1), show the complete data (2), read a specific
 
 ### Add new entry
 
-The program will ask you to paste information about each part defined in the program. You can change this by changing the part of the code at line 17:
+Type 0 and press Enter. The program will ask you to paste information about each part.
+
+These parts are pre-defined in the script but you can change them by changing the part of the code at line 17:
 ```
 self.columns = ["Title", "Authors", "Journal", "Date", "Methods",
                 "Results", "Discussion", "Other"]
 ```
+For example, to add a column named "sample size", type:
+```
+self.columns = ["Title", "Authors", "Journal", "Date", "Sample size", "Methods",
+                "Results", "Discussion", "Other"]
+```
+The program first ask you about the title, copy paste the title and press Enter.
+It then asks you if you want to add more in title. Type 0 and press Enter if not. Keep pasting stuff otherwise.
 
-Type 0 and press Enter
-The program first ask you about the title, copy paste the title and press Enter
-It then asks you if you want to add more in title. Type 0 and press Enter if not.
-
-Follow the same procedure for the following columns until you get back to asking you about what to do next.
-Then type 4 and press Enter to save the Dataframe onto the Excel document.
+Follow the same procedure for the following columns until it gets back to asking you about what to do next.
+Then type 4 and press Enter to save the Dataframe into the Excel document.
 
 ### Modify entry
 
-The program will ask you which index and column to modify. Copy&paste the new value, press Enter. Then type 4 and press Enter to save it.
+The program will ask you which index and column to modify. Copy & paste the new value, press Enter. Then type 4 and press Enter to save it.
 
 ### Show the complete data
 
@@ -55,9 +60,11 @@ This option will print the Dataframe.
 
 ### Read a specific entry
 
-This option will allow you to read all entries of a specific index. You just have to specifiy the index.
-If you write all instead of typing a number, the program will display all columns of all entries one by one.
+This option will allow you to read what is in each column of a specific index. You just have to specifiy the index.
+If you write *all* or anything else but a number, the program will display all columns of all entries one by one.
 
 ### Save data
 
 This option will save the Dataframe into the Excel document.
+
+Feel free to improve this script (pull request) or to email me if you have any question
