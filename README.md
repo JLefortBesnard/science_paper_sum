@@ -1,4 +1,4 @@
-# science_paper_sum.py
+# Keep the summary of research papers (script: sum_research_papers_keeper.py)
 Create an Excel sheet with selected chunks of scientific papers.
 
 ## Before running the program
