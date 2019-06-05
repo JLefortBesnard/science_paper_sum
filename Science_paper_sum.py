@@ -58,7 +58,7 @@ class sum_paper_sheet:
     def read_df(self):
         print(self.my_dataframe)
         print(" " * 150)
-        print(" ***** ")
+        print("*****")
         row_number = input("Which index to display? (Type all for iterating over the whole dataframe)")
         print(" " * 150)
         try:
@@ -71,6 +71,7 @@ class sum_paper_sheet:
                 next = input(" ")
         except:
             for index in self.my_dataframe.index:
+                print("-" * 10)
                 print("index {} > ".format(index))
                 print(" " * 10)
                 for column in self.columns:
