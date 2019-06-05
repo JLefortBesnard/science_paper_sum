@@ -59,13 +59,27 @@ class sum_paper_sheet:
         print(self.my_dataframe)
         print(" " * 150)
         print(" ***** ")
-        row_number = int(input("Which index to display?"))
-        for column in self.columns:
-            print("{} > ".format(column))
-            entry = self.my_dataframe[column].loc[row_number]
-            print(entry)
-            print(" " * 150)
-            next = input("Next: press Enter")
+        row_number = input("Which index to display? (Type all for iterating over the whole dataframe)")
+        print(" " * 150)
+        try:
+            row_number = int(row_number)
+            for column in self.columns:
+                print("{} > ".format(column))
+                entry = self.my_dataframe[column].loc[row_number]
+                print(entry) 
+                print(" " * 150)
+                next = input(" ")
+        except:
+            for index in self.my_dataframe.index:
+                print("index {} > ".format(index))
+                print(" " * 10)
+                for column in self.columns:
+                    print("{} > ".format(column))
+                    print(" " * 10)
+                    entry = self.my_dataframe[column].loc[index]
+                    print( entry)
+                    print(" " * 150)
+                    next = input(" ")
 
     def save(self):
         self.my_dataframe.to_excel(self.path, index=False)
