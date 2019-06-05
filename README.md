@@ -17,7 +17,7 @@ cd science_papers_sum       # move into this directory
 
 Now you can download the script Science_paper_sum.py (on the top)
 Put the script into your newly created folder "science_papers_sum".
-Go back into your terminal with python or ipython activated and type 
+Go back into your terminal with python or ipython activated and type:
 ```
 run Science_paper_sum.py
 ```
@@ -28,9 +28,9 @@ For example, let's say I'm on a new project about the Default Mode Network in Al
 
 ## 2. Select what you wanna do with it
 
-Add new entry (0), modify entry (1), show the complete data (2), read a specific entry (3) or save data (4) or press ctrl + c to exit
+Add new entry (0), modify entry (1), show the complete data (2), read a specific entry (3) or save data (4) or press ctrl + c to exit.
 
-#### Add new entry
+### Add new entry
 
 The program will ask you to paste information about each part defined in the program. You can change this by changing the part of the code at line 17:
 ```
@@ -45,19 +45,19 @@ It then asks you if you want to add more in title. Type 0 and press Enter if not
 Follow the same procedure for the following columns until you get back to asking you about what to do next.
 Then type 4 and press Enter to save the Dataframe onto the Excel document.
 
-#### Modify entry
+### Modify entry
 
 The program will ask you which index and column to modify. Copy&paste the new value, press Enter. Then type 4 and press Enter to save it.
 
-#### show the complete data
+### Show the complete data
 
-This option will print the Dataframe
+This option will print the Dataframe.
 
-#### read a specific entry
+### Read a specific entry
 
 This option will allow you to read all entries of a specific index. You just have to specifiy the index.
 If you write all instead of typing a number, the program will display all columns of all entries one by one.
 
-#### save data
+### Save data
 
-This option will save the Dataframe into the Excel document
+This option will save the Dataframe into the Excel document.
